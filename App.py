@@ -60,6 +60,8 @@ if __name__ == '__main__':
 
     # Шаг № 1
     kExtractor.createRoughLikenessTable()
+    # Шаг № 2.1 и 2.2
+    kExtractor.createSplittingUnNormTable()
 
 
 # Строка запуска программы в консоли
