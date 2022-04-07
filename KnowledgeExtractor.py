@@ -119,7 +119,7 @@ class KnowledgeExtractor:
             for nRowQQut in rowMaxQOut['Out'].split(','):  #Для каждой строки
                 categories = self.inputData[rowMaxQOut['ObsNm']][int(nRowQQut)-2]
                 
-                for categorie in categories.split(','): #Для каждого значения из перечня
+                for categorie in categories.split(';'): #Для каждого значения из перечня
 
                     if len(CategoriesClustersData) == 0: #Если таблица пуста
                         self.__addRowCategoriesClustersData(CategoriesClustersData,categorie,nRowQQut) #Добавь значение
