@@ -45,6 +45,7 @@ def isValidResourcesPath(args):
 
 # Точка входа приложения
 if __name__ == '__main__':
+    logger.info(f'KnowledgeExtractor запускается. Сейчас всё начнётся.')
     try:
         args = initArguments()
         isValidArgs = isValidResourcesPath(args)
@@ -64,6 +65,9 @@ if __name__ == '__main__':
         
         # Шаг № 2
         kExtractor.createSplittingUnNormTable()
+
+        # Шаг № 3
+        kExtractor.createVariantTables()
 
     except SystemExit as e:
         # игнор исключения (игнор так как метод exit() выкидывает эту ошибку при завершении python скрипта)
